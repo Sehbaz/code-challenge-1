@@ -1,20 +1,54 @@
 * {
     padding: 0;
     margin: 0;
-    border: 0px solid red
+    border: 0px solid red;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
     width: 100%;
+    border: 0px;
+
 }
+
+/* Top bar */
+#Intro {
+    top: 0;
+    position: fixed;
+    background-color: black;
+    color: white;
+    height: 40px;
+    width: 100%;
+    z-index: 999999;
+    text-align: center;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+
+}
+
+/* Nav bar */
+.nav-bar {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 28%, rgba(255, 255, 255, 0) 100%);
+    margin-top: 40px;
+}
+
+.search-icon {
+    padding-left: 10px;
+}
+
+
+
 
 /* main - page */
 .main-page {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     min-height: 100vh;
+
+    position: relative;
     background: url(./images/main-big.png) no-repeat center / cover;
 }
 
@@ -93,14 +127,90 @@ button {
     height: fit-content;
     background-color: black;
     color: white;
+    display: flex;
+}
+
+.simple-form {
+    display: flex;
+    padding-bottom: 1.25rem;
+}
+
+.simple-form input {
+    margin: 0 .25rem;
+    min-width: 125px;
+    border: 1px solid #eee;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+}
+
+.form-btn {
+    padding: 10px;
+    border: 1px solid #eee;
+    background-color: black;
+    color: white;
+}
+
+.main-btn {
+    border: 1px solid #eee;
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
+.main-btn-ear {
+    border: 1px solid #eee;
+    background: none;
+    color: white;
+    padding: 10px;
+}
+
+.social-icon {
+    padding: 10px
+}
+
+.footer-container {
+    padding: 20px;
 
 }
 
 .footer {
-    display: flex;
-    justify-content: space-around;
+    background-color: black;
 }
 
+.my-footer {
+    padding: 100px;
+}
+
+.child-img {
+    position: relative;
+    top: -80px;
+}
+
+.footer-img img {
+    float: left;
+    bottom: -25px;
+    margin-right: 20px;
+
+
+}
+
+.credit {
+    padding-bottom: 100px;
+}
+
+.payment {
+    padding: 20px;
+    width: fit-content;
+}
+
+/* reposiveness */
+@media screen and (max-width: 1000px) {
+    .footer-img {
+        display: none;
+    }
+}
 
 
 @media screen and (max-width: 600px) {
@@ -114,6 +224,7 @@ button {
     }
 
     .main-page {
+        justify-content: flex-end;
         background: url(./images/main-small.png) no-repeat center / cover;
     }
 
@@ -135,7 +246,19 @@ button {
 
     .main-content p {
         display: none;
-
     }
+
+    .main-btn-ear {
+        display: none;
+    }
+
+    .simple-form input {
+        min-width: 40%;
+    }
+
+    .simple-form button {
+        min-width: 40%;
+    }
+
 
 }
